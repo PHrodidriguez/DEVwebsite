@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV | Pedro Rodriguez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+  emailjs.init('udCBjTAddXozGbFgX');
+})();
+</script>
+<script type="text/javascript">
+  window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      this.contact_number.value = Math.random() * 100000 | 0;
+      emailjs.sendForm('service_qunxo6q', 'template_3r149of', this)
+          .then(function() {
+              alert('Mensagem enviada com sucesso!! Em breve entrarei em contato!! :)');
+              location.reload();
+          }, function(error) {
+              console.log('FAILED...', error);
+          });
+  });
+}
+</script>
+    <header>
+      <div class="heade cabeçalho"><h5>Inicio</h5></div>
+        <div class="heade1 cabeçalho"><h5>Projetos Recentes</h5></div>
+        <div class="icone"><i class="fa-solid fa-bars barras"></i></div>
+        <div class="heade2 cabeçalho"><h5>Sobre mim</h5></div>
+        <div class="heade3 cabeçalho"><h5>contato</h5></div>
+     </header>
+    <div class="container">
+        <div class="home">
+            <div class="banner">
+                <div class="content">
+                        <button class="start"><i class="fa-solid fa-arrow-down"></i></button>
+            </div>
+        </div>
+        <div class="services">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide--one">
+                    <div>
+                      <h2>Snake-Game</h2>
+                      <p>Jogo feito com javascript puro</p>
+                      <a href=" https://phrodidriguez.github.io/SnakeGame/" target="_blank">Deploy</a>
+                      <a href="https://github.com/PHrodidriguez/SnakeGame" target="_blank">Code</a>
+                    </div>
+                  </div>
+                  <div class="swiper-slide swiper-slide--two">
+                    <div>
+                      <h2>Cep-Search</h2>
+                      <p>
+                        Web App que realiza pesquisas de cep, consumindo a api do ViaCep.
+                        Feito com React-js!
+                      </p>
+                      <a href=" https://phrodidriguez.github.io/cepsearch/" target="_blank">Deploy</a>
+                      <a href="https://github.com/PHrodidriguez/cepsearch" target="_blank">Code</a>
+                    </div>
+                  </div>
+            
+                  <div class="swiper-slide swiper-slide--three">
+            
+                    <div>
+                      <h2>Calculadora</h2>
+                      <p>
+                        Web App de calculadora feito com React-js
+                      </p>
+                      <a href=" https://phrodidriguez.github.io/calculator/" target="_blank">Deploy</a>
+                      <a href="https://github.com/PHrodidriguez/calculator" target="_blank">Code</a>
+                    </div>
+                  </div>
+            
+                  <div class="swiper-slide swiper-slide--four">
+            
+                    <div>
+                      <h2>Lista de Supermercado</h2>
+                      <p>
+                        Web App feito com javascript puro!
+                      </p>
+                      <a href="https://phrodidriguez.github.io/Lista-de-compras/" target="_blank">Deploy</a>
+                      <a href="https://github.com/PHrodidriguez/Lista-de-compras" target="_blank">Code</a>
+                    </div>
+                  </div>
+            
+                  <div class="swiper-slide swiper-slide--five">
+            
+                    <div>
+                      <h2>Em Desenvolvimento</h2>
+                      <p>
+                      Projeto em Desenvolvimento
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              
+            </main>
+        </div>
+        <div class="about">
+          <h3>Hello, world!!</h3><hr>
+          
+          <p>Me chamo Pedro Roddriguez!<br>
+             Sou principiante na programação e estou me desenvolvendo e começando a dar os primeiros passos nesta linda area em que sou apaixonado!
+            Atualmente meus projetos são mais voltados para o front-end, porém demosntro interesse em todas as áreas e tenho muita vontade de aprender
+           </p>
+           <div class="skills about-skills">
+                  <h5>Principais Habilidades</h5><hr>
+                 <form class="form-one">
+                  <i class="fa-brands fa-js"></i>
+                  <i class="fa-brands fa-node-js"></i>
+                  <i class="fa-brands fa-react"></i>
+                  <i class="fa-brands fa-css3"></i>
+                  <i class="fa-brands fa-html5"></i>
+                 </form>
+                 <h5>Habilidades Secundárias</h5><hr>
+                 <form class="second">
+                  <i class="fa-brands fa-python"></i>
+                  <i class="fa-brands fa-php"></i>
+                  <i class="fa-brands fa-linux"></i>
+                  <i class="fa-brands fa-git-alt"></i>
+                 </form>
+          </div>
+          <div class="about-me">
+          </div>
+         
+        </div>
+      
+        <div class="contact">
+          <div class="contact-form responsive-form">
+            <form id="contact-form">
+              <h3>Quer entrar em conato?</h3>
+              <input type="hidden" name="contact_number">
+              <label for="name" >Qual seu nome?</label>
+              <input  placeholder="Digite seu nome" type="text" name="user_name"/>
+              <label for="user_email">Qual o seu Email?</label>
+              <input placeholder="exemple@outlook.com" type="email" required name="user_email"/>
+              <label for="textarea">Sua mensagem aqui:</label>
+              <textarea  name="message" style="width: 350px;"></textarea>
+              <button name="send" type="submit">Enviar mensagem</button>
+            </form>  
+          
+          </div>
+
+        </div>
+        <footer>
+         <a href="https://www.linkedin.com/in/pedro-rodriguez-3b0262223/"> <button class="links"><i class="fa-brands fa-linkedin"></i></button></a>
+         <a href="https://github.com/PHrodidriguez"> <button class="links"><i class="fa-brands fa-github"></i></button></a>
+         <a href="#"> <button class="links"><i class="fa-brands fa-tiktok"></i></button></a>
+        </footer>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="scriptone.js"></script>
+    
+</body>
+</html>
